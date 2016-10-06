@@ -143,15 +143,12 @@ function createTag(element, textLineOne, textLineTwo, tagDuration){
   var tagContainer = $('#'+element),
   height = $(tagContainer).height(),
   width = $(tagContainer).width(),
-  tagPaper = Raphael(element, width, height),
+  tagPaper = Raphael(element),
   centerX = width / 2,
   centerY= height / 2;
 
-  // // Set viewBox for Responsive tag
-  // var svgHeight = pathBox.height + textL1Box.height + textL1Box.height;
-  // var svgWidth = Math.max(pathBox.width, textL1Box.width, textL1Box.width);
-  //tagPaper.setViewBox(0, 0, width, height, true); 
- // tagPaper.canvas.setAttribute('preserveAspectRatio', 'none');
+  // Set viewBox for Responsive tag
+  tagPaper.setViewBox(0, 0, width, height, true); 
 
   // Create 3 pointer tags (three to allow for the pulse effect)
   var first_path = tagPaper.path("M50,99.5l-1.3-1.8C47.4,95.9,16,53.1,16,34.7C16,15.8,31.2,0.5,50,0.5c18.8,0,34,15.4,34,34.2 c0,18.3-31.4,61.2-32.7,63L50,99.5z M50,3.7c-17,0-30.8,13.9-30.8,31C19.2,50,44,85.6,50,94c6-8.4,30.8-44,30.8-59.3 C80.8,17.6,67,3.7,50,3.7z"); 

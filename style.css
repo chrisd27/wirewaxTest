@@ -40,11 +40,6 @@
   src: url('CrimsonText-BoldItalic.ttf');
 }
 
-#tag_container{
-  height: 100%;
-  width:100%;
-}
-
 .my-svg{
     overflow: inherit !important;
     width: 100%;
